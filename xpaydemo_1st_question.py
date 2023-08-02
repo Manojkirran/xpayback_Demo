@@ -78,7 +78,7 @@ def get_user(user_id: int):
     return user
 
 
-# uploading profile picture to MongoDB
+# uploading profile picture to MongoDB using without SQLALCHEMY
 def upload_profile_picture(user_id: int, image_url: str):
     profile_picture_collection.insert_one({"user_id": user_id, "image_url": image_url})
     return {"message": "Profile picture uploaded successfully"}
